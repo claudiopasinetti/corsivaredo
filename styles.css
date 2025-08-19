@@ -122,6 +122,51 @@ html {
     border: 1px solid #e5e7eb;
 }
 
+/* Mobile logo responsive fixes */
+@media (max-width: 768px) {
+    .logo-mobile {
+        height: 2.5rem; /* h-10 equivalent */
+        width: auto;
+        max-width: 120px;
+        object-fit: contain;
+        object-position: left center;
+    }
+}
+
+@media (min-width: 769px) {
+    .logo-desktop {
+        height: 3rem; /* h-12 equivalent */
+        width: auto;
+        object-fit: contain;
+    }
+}
+
+/* Header CTA Button - Mobile and Desktop */
+.header-cta-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 1.2 !important;
+    white-space: nowrap !important;
+}
+
+@media (max-width: 768px) {
+    .header-cta-btn {
+        font-size: 0.875rem !important; /* text-sm */
+        padding: 0.5rem 1rem !important; /* px-4 py-2 */
+        max-width: 40% !important;
+        min-height: 2.5rem !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .header-cta-btn {
+        font-size: 1rem !important; /* text-base */
+        padding: 0.75rem 1.5rem !important; /* px-6 py-3 */
+        min-height: 3rem !important;
+    }
+}
+
 /* Cookie banner slide-up animation */
 #cookie-banner {
     transform: translateY(100%);
