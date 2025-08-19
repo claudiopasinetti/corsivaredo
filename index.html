@@ -79,16 +79,17 @@
             <div class="flex items-center">
                 <img src="./lido-azzurro-logo.jpg" 
                      alt="Lido Azzurro Logo" 
-                     class="h-12 w-auto"
+                     class="logo-mobile md:logo-desktop"
                      loading="eager">
             </div>
             
             <!-- Header CTA -->
             <a href="#form-section" 
-               class="bg-lido-blue text-white px-6 py-2 rounded-full font-semibold hover:bg-lido-dark transition-colors cta-track" 
+               class="bg-lido-blue text-white rounded-full font-semibold hover:bg-lido-dark transition-colors cta-track header-cta-mobile md:header-cta-desktop" 
                data-event="cta_click" 
                data-location="header">
-                Prenota la prova a 10€
+                <span class="md:hidden">Prenota la prova</span>
+                <span class="hidden md:inline">Prenota la prova a 10€</span>
             </a>
         </div>
     </header>
@@ -209,7 +210,7 @@
                             <h3 class="text-xl font-bold text-lido-dark mb-4">Adulti</h3>
                         </div>
                         <p class="text-gray-700 text-center">
-                            Allena performance e benessere, mattina o sera, senza stress alle articolazioni.
+                            Allena performance e benessere. Che sia mattina, pomeriggio o sera, senza stress.
                         </p>
                     </div>
 
@@ -343,62 +344,67 @@
         </section>
 
         <!-- FOMO + Social Proof Section -->
-        <section class="py-16 bg-red-50">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-red-700 mb-4">
-                        Ultimi giorni!
-                    </h2>
-                    
-                    <!-- Countdown Timer -->
-                    <div id="countdown" class="text-2xl md:text-3xl font-bold text-red-600 mb-6">
-                        <!-- Countdown will be populated by JS -->
-                    </div>
-                    
-                    <p class="text-xl text-red-700 mb-8">
-                        La prova a 10€ scade il 7/9. Blocca ora il tuo posto.
-                    </p>
+        <section class="py-16 bg-[#fff4f0]">
+            <div class="container mx-auto px-4 text-center">
+                <!-- Narrative Countdown Section -->
+                <h2 class="text-2xl md:text-4xl font-bold text-[#b01313] mb-8">
+                    Hai tempo fino al 7 settembre
+                </h2>
+                
+                <div id="countdown" class="mb-8">
+                    <!-- Countdown will be populated by JS -->
                 </div>
+                
+                <p class="text-lg md:text-xl text-[#b01313] font-medium mb-8">
+                    Blocca ora la prova a 10€. Bastano 30 secondi.
+                </p>
 
+                <!-- CTA button -->
+                <a href="#form-section" class="inline-block bg-[#b01313] text-white text-base md:text-lg font-semibold px-8 py-3 rounded-full hover:bg-[#920f0f] transition-colors cta-track" data-event="cta_click" data-location="countdown">
+                    Prenota la prova
+                </a>
+            </div>
+
+            <div class="container mx-auto px-4 mt-16">
                 <!-- Testimonials -->
                 <div class="grid md:grid-cols-3 gap-8 mb-12">
                     <div class="bg-white rounded-lg p-6 shadow-lg">
                         <div class="flex items-center mb-4">
                             <div class="w-12 h-12 bg-lido-light rounded-full flex items-center justify-center text-lido-dark font-bold">
-                                M
+                                R
                             </div>
                             <div class="ml-3">
-                                <div class="font-semibold">Marco S.</div>
+                                <div class="font-semibold">Roberto D.</div>
                                 <div class="text-yellow-500">⭐⭐⭐⭐⭐</div>
                             </div>
                         </div>
-                        <p class="text-gray-700 italic">"Struttura impeccabile, istruttori preparati. Mio figlio ha imparato in poco tempo!"</p>
+                        <p class="text-gray-700 italic">"Professional...50 metri di pura libidine. Ottimo impianto per nuoto con tante possibilità di corsi. Anche per veri atleti."</p>
                     </div>
                     
                     <div class="bg-white rounded-lg p-6 shadow-lg">
                         <div class="flex items-center mb-4">
                             <div class="w-12 h-12 bg-lido-light rounded-full flex items-center justify-center text-lido-dark font-bold">
-                                A
+                                L
                             </div>
                             <div class="ml-3">
-                                <div class="font-semibold">Anna R.</div>
+                                <div class="font-semibold">Ludovico B.</div>
                                 <div class="text-yellow-500">⭐⭐⭐⭐⭐</div>
                             </div>
                         </div>
-                        <p class="text-gray-700 italic">"Acquagym perfetta per mantenermi in forma. Atmosfera molto accogliente."</p>
+                        <p class="text-gray-700 italic">"Splendida piscina con vasca da 50m."</p>
                     </div>
                     
                     <div class="bg-white rounded-lg p-6 shadow-lg">
                         <div class="flex items-center mb-4">
                             <div class="w-12 h-12 bg-lido-light rounded-full flex items-center justify-center text-lido-dark font-bold">
-                                G
+                                D
                             </div>
                             <div class="ml-3">
-                                <div class="font-semibold">Giuseppe L.</div>
+                                <div class="font-semibold">Daniele</div>
                                 <div class="text-yellow-500">⭐⭐⭐⭐⭐</div>
                             </div>
                         </div>
-                        <p class="text-gray-700 italic">"Finalmente una piscina vera a Varedo! Vasca 50m e servizi eccellenti."</p>
+                        <p class="text-gray-700 italic">"Ci vado per il nuoto libero, ha una vasca da 50m coperta e tenuta molto bene. Il prezzo è ottimo."</p>
                     </div>
                 </div>
             </div>
@@ -599,14 +605,25 @@
                         </button>
                     </div>
                     
-                    <!-- Calendar images placeholder -->
-                    <div class="space-y-4">
-                        <img src="https://via.placeholder.com/800x600/0077be/ffffff?text=Calendario+Corsi+Settembre" 
-                             alt="Calendario corsi settembre" 
-                             class="w-full rounded-lg">
-                        <img src="https://via.placeholder.com/800x600/87ceeb/000000?text=Orari+Dettagliati" 
-                             alt="Orari dettagliati corsi" 
-                             class="w-full rounded-lg">
+                    <!-- Calendar links -->
+                    <div class="space-y-6">
+                        <div class="text-center">
+                            <a href="https://drive.google.com/file/d/13g1pGil7XIonQdAvCIugM1N3yDDXeAEB/view?usp=drive_link" 
+                               target="_blank" 
+                               class="inline-flex items-center bg-lido-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-lido-dark transition-colors">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z"/>
+                                </svg>
+                                Calendario corsi e nuoto
+                            </a>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <p class="text-gray-600 text-sm text-center">
+                                Clicca il link sopra per visualizzare gli orari completi dei corsi di nuoto e nuoto libero. 
+                                Il calendario si aprirà in una nuova finestra.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
