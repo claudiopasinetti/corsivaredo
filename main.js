@@ -20,10 +20,10 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 /**
- * Countdown timer to September 7th, 2025 at 23:59 (Europe/Rome timezone)
+ * Countdown timer to September 15th, 2025 at 23:59 (Europe/Rome timezone)
  */
 function initializeCountdown() {
-    const targetDate = new Date('2025-09-07T23:59:00+02:00'); // Europe/Rome timezone
+    const targetDate = new Date('2025-09-15T23:59:00+02:00'); // Europe/Rome timezone
     const countdownElement = document.getElementById('countdown');
     
     if (!countdownElement) return;
@@ -34,7 +34,7 @@ function initializeCountdown() {
         
         if (timeLeft <= 0) {
             // Promo expired
-            countdownElement.innerHTML = '<span class="countdown-expired">Promo scaduta</span>';
+            countdownElement.innerHTML = '<span class="text-3xl md:text-5xl lg:text-6xl font-bold text-[#b01313]">Promo scaduta</span>';
             countdownElement.classList.add('countdown-expired');
             
             // Disable CTAs and show alternative message
@@ -48,22 +48,22 @@ function initializeCountdown() {
         const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
         
         countdownElement.innerHTML = `
-            <div class="flex justify-center gap-4 flex-wrap">
+            <div class="flex justify-center gap-6 md:gap-8 flex-wrap">
                 <div class="text-center">
-                    <div class="text-3xl font-bold">${days}</div>
-                    <div class="text-sm">giorni</div>
+                    <div class="text-3xl md:text-5xl lg:text-6xl font-bold text-[#b01313] mb-1">${days.toString().padStart(2, '0')}</div>
+                    <div class="text-sm md:text-base font-medium uppercase tracking-wide text-[#b01313]">giorni</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-3xl font-bold">${hours}</div>
-                    <div class="text-sm">ore</div>
+                    <div class="text-3xl md:text-5xl lg:text-6xl font-bold text-[#b01313] mb-1">${hours.toString().padStart(2, '0')}</div>
+                    <div class="text-sm md:text-base font-medium uppercase tracking-wide text-[#b01313]">ore</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-3xl font-bold">${minutes}</div>
-                    <div class="text-sm">min</div>
+                    <div class="text-3xl md:text-5xl lg:text-6xl font-bold text-[#b01313] mb-1">${minutes.toString().padStart(2, '0')}</div>
+                    <div class="text-sm md:text-base font-medium uppercase tracking-wide text-[#b01313]">min</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-3xl font-bold">${seconds}</div>
-                    <div class="text-sm">sec</div>
+                    <div class="text-3xl md:text-5xl lg:text-6xl font-bold text-[#b01313] mb-1">${seconds.toString().padStart(2, '0')}</div>
+                    <div class="text-sm md:text-base font-medium uppercase tracking-wide text-[#b01313]">sec</div>
                 </div>
             </div>
         `;
